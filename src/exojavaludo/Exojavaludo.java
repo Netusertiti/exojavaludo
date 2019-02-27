@@ -10,7 +10,7 @@ import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import views.FormCreateCharacter;
+import views.DescriptionPersonnage;
 
 /**
  *
@@ -46,7 +46,7 @@ public class Exojavaludo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        FormCreateCharacter formCreateCharacter = new FormCreateCharacter();
+        DescriptionPersonnage DescriptionPersonnage = new DescriptionPersonnage();
     }
 
 }
