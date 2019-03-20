@@ -8,10 +8,13 @@ package views;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.KeyEvent;
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
@@ -47,7 +50,7 @@ public class FormCreateCharacter extends JFrame {
          */
 
         // Gère la fenêtre
-        setTitle("ma petite fenetre");                                                 // Met un titre
+        setTitle("Création de mon pesonnage");                                                 // Met un titre
         setBounds(25, 25, 500, 500);						// Fait une fenêtre de largeur x hauteur avec 25 de marge
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);				// Ferme l'application si il n'y à plus de fenêtre
         setLocationRelativeTo(null);    					// Centre la fenêtre
@@ -112,37 +115,68 @@ public class FormCreateCharacter extends JFrame {
         //Case à cocher
         gbC.gridx = 0;
         gbC.gridy = 4;
-        JCheckBox checkbox = new JCheckBox("ma case 1", false);
+        JCheckBox checkbox = new JCheckBox("Quenouille", false);
         gb.setConstraints(checkbox, gbC);
         add(checkbox, gbC);
 
         gbC.gridx = 1;
         gbC.gridy = 4;
-        JCheckBox checkbox2 = new JCheckBox("ma case 2", false);
+        JCheckBox checkbox2 = new JCheckBox("DPS", false);
         gb.setConstraints(checkbox2, gbC);
         add(checkbox2, gbC);
 
         gbC.gridx = 2;
         gbC.gridy = 4;
-        JCheckBox checkbox3 = new JCheckBox("ma case 3", false);
+        JCheckBox checkbox3 = new JCheckBox("TANK", false);
         gb.setConstraints(checkbox3, gbC);
         add(checkbox3, gbC);
 
         gbC.gridx = 3;
         gbC.gridy = 4;
-        JCheckBox checkbox4 = new JCheckBox("ma case 4", false);
+        JCheckBox checkbox4 = new JCheckBox("HEAL", false);
         gb.setConstraints(checkbox4, gbC);
         add(checkbox4, gbC);
 
+        // TEST
+        //
+        //
+        gbC.gridx = 0;
+        gbC.gridy = 10;
+        JRadioButton birdButton = new JRadioButton("test");
+        birdButton.setMnemonic(KeyEvent.VK_B);
+        birdButton.setActionCommand("test");
+        birdButton.setSelected(true);
+
+        gbC.gridx = 1;
+        gbC.gridy = 10;
+        JRadioButton catButton = new JRadioButton("tist");
+        catButton.setMnemonic(KeyEvent.VK_C);
+        catButton.setActionCommand("tist");
+
+        gbC.gridx = 2;
+        gbC.gridy = 10;
+        JRadioButton dogButton = new JRadioButton("tost");
+        dogButton.setMnemonic(KeyEvent.VK_D);
+        dogButton.setActionCommand("tost");
+
+        //Group the radio buttons.
+        ButtonGroup group = new ButtonGroup();
+        group.add(birdButton);
+        group.add(catButton);
+        group.add(dogButton);
+
+        // FIN RADIO
+        //
+        //
         gbC.gridx = 0;
         gbC.gridy = 5;
         JLabel jlabelPresentation = new JLabel("Présentation : ");
         gb.setConstraints(jlabelPresentation, gbC);
         add(jlabelPresentation, gbC);
 
-        gbC.gridx = 0;
+        gbC.gridx = 0 / 1;
         gbC.gridy = 6;
-        JTextArea JTextAreaDecription = new JTextArea("Description du jeu", 5, 20);
+        JTextArea JTextAreaDecription = new JTextArea("Description du jeu", 5, 10);
         JTextAreaDecription.setEditable(false);
         gb.setConstraints(JTextAreaDecription, gbC);
         add(JTextAreaDecription, gbC);

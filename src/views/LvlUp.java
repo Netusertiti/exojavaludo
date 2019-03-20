@@ -8,10 +8,13 @@ package views;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.KeyEvent;
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JRadioButton;
 import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 
 /**
@@ -21,7 +24,7 @@ import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 public class LvlUp extends JFrame {
 
     public LvlUp() {
-        setTitle("ma petite fenetre");                                          // Met un titre
+        setTitle("Séléction de mon aptitude");                                          // Met un titre
         setBounds(25, 25, 500, 500);						// Fait une fenêtre de largeur x hauteur avec 25 de marge
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);				// Ferme l'application si il n'y à plus de fenêtre
         setLocationRelativeTo(null);    					// Centre la fenêtre
@@ -76,6 +79,25 @@ public class LvlUp extends JFrame {
         JButton JButtonComfirm = new JButton("Comfirmer");
         gb.setConstraints(JButtonComfirm, gbC);
         add(JButtonComfirm, gbC);
+
+        gbC.gridx = 0;
+        gbC.gridy = 7;
+        JRadioButton birdButton = new JRadioButton("bird");
+        birdButton.setMnemonic(KeyEvent.VK_B);
+        birdButton.setActionCommand("bird");
+
+        gbC.gridx = 0;
+        gbC.gridy = 8;
+        JRadioButton catButton = new JRadioButton("cat");
+        catButton.setMnemonic(KeyEvent.VK_C);
+        catButton.setActionCommand("Cat");
+
+        ButtonGroup group = new ButtonGroup();
+        group.add(birdButton);
+        group.add(catButton);
+
+        birdButton.addActionListener(this);
+        catButton.addActionListener(this);
 
         setVisible(true);
     }

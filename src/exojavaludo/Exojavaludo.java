@@ -10,7 +10,7 @@ import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import views.DescriptionPersonnage;
+import views.LvlUp;
 
 /**
  *
@@ -46,7 +46,7 @@ public class Exojavaludo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        DescriptionPersonnage DescriptionPersonnage = new DescriptionPersonnage();
+        LvlUp LvlUp = new LvlUp();
     }
 
 }

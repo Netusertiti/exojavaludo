@@ -24,7 +24,7 @@ public class DescriptionPersonnage extends JFrame {
     public DescriptionPersonnage() {
 
         // Gère la fenêtre
-        setTitle("ma petite fenetre");                                                 // Met un titre
+        setTitle("Déscription de mon personnage");                                                 // Met un titre
         setBounds(25, 25, 500, 500);						// Fait une fenêtre de largeur x hauteur avec 25 de marge
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);				// Ferme l'application si il n'y à plus de fenêtre
         setLocationRelativeTo(null);    					// Centre la fenêtre
